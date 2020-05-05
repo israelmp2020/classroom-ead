@@ -5,9 +5,7 @@
           <ul class="navbar-nav mr-auto">                        
           </ul>
           <form class="form-inline my-2 my-md-0">
-          <a>
-            <button type="button" class="btn btn-outline-light">Faça Login</button>
-          </a>
+            <a href="${pageContext.request.contextPath}/signin" class="btn btn-outline-light">Faça Login</a>
           </form>
         </div>
       </div>
