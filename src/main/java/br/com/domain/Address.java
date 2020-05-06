@@ -1,17 +1,18 @@
 package br.com.domain;
 
-
 public class Address {
+
     private String street;
     private String numberCa;
     private String city;
-    
+
     public Address(String street, String numberCa, String city) {
         this.street = street;
         this.numberCa = numberCa;
         this.city = city;
     }
-    public Address(){      
+
+    public Address() {
     }
 
     public String getStreet() {
@@ -37,5 +38,5 @@ public class Address {
     public void setCity(String city) {
         this.city = city;
     }
-    
+
 }

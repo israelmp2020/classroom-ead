@@ -14,7 +14,7 @@
                 <section class="jumbotron text-center">
                     <div class="container">
                         <h1 class="jumbotron-heading">Classroom EaD</h1>
-                        <p class="lead text-muted">Classroom EaD é um Sistema para cadastro de aluno e notas e futuramente Professores.</p>
+                        <p class="lead text-muted">Classroom EaD é um Sistema para cadastro de alunos e notas e futuramente Professores.</p>
                         <p>
                             <a href="${pageContext.request.contextPath}/signin" class="btn btn-primary my-2">Faça Login</a>
                             <a href="${pageContext.request.contextPath}/signin" class="btn btn-success my-2">Cadastrar Aluno</a>

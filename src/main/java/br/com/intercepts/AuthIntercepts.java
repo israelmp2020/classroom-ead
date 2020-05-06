@@ -1,25 +1,30 @@
 package br.com.intercepts;
 
+import br.com.caelum.vraptor.Intercepts;
 import br.com.caelum.vraptor.Result;
 import br.com.caelum.vraptor.controller.ControllerMethod;
 import br.com.caelum.vraptor.core.InterceptorStack;
 import br.com.caelum.vraptor.interceptor.Interceptor;
+import br.com.annotations.Auth;
 import br.com.components.AuthSession;
-import br.com.controller.AuthController;
+import br.com.controllers.AuthController;
 import javax.inject.Inject;
 
-public class AuthIntercepts implements Interceptor{
-@Inject
+@Intercepts
+public class AuthIntercepts implements Interceptor {
+
+    @Inject
     private AuthSession authSession;
-    
+
     @Inject
     private Result result;
-    
+
     @Override
     public void intercept(InterceptorStack is, ControllerMethod cm, Object o) {
-        if (authSession.isLogged()){
+        System.out.println("authSession" + authSession.isLogged());
+        if (authSession.isLogged()) {
             is.next(cm, o);
-        }else{
+        } else {
             authSession.signout();
             result.redirectTo(AuthController.class).login();
         }
@@ -27,8 +32,8 @@ public class AuthIntercepts implements Interceptor{
 
     @Override
     public boolean accepts(ControllerMethod cm) {
-         return cm.containsAnnotation(Auth.class) || cm.getController().getType().isAnnotationPresent(Auth.class);
+        boolean canGo = cm.containsAnnotation(Auth.class) || cm.getController().getType().isAnnotationPresent(Auth.class);
+        System.out.println("Can go " + canGo);
+        return canGo;
     }
-    
-    
 }
