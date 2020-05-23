@@ -22,12 +22,16 @@ public class Student {
         this.numberTe = numberTe;
         this.email = email;
         this.cpf = cpf;
-        this.createdAt = createdAt;
+        this.createdAt = new Date();
         this.id = UUID.randomUUID().toString();
     }
 
     public Student() {
         this.id = UUID.randomUUID().toString();
+    }
+
+    public Student(String joao, String string, int i) {
+   
     }
 
     public String getId() {

@@ -25,13 +25,13 @@ public class AuthController {
     @Post("auth")
     public void authenticate(Credentials credentials) {
 
-        if (credentials.getUserName().equalsIgnoreCase("israel")
+        if (credentials.getUserName().equalsIgnoreCase("joao")
                 && credentials.getPassword().equals("123")) {
             authSession.setUserName(credentials.getUserName());
             authSession.setIsLogged(true);
             result.redirectTo(StudentsController.class).getStudents();
         } else {
-            result.include("loginErrorMsg", "Login inválido!");
+            result.include("loginErrorMsg", "Login ou Senha inválido!");
             result.redirectTo(this).login();
         }
     }

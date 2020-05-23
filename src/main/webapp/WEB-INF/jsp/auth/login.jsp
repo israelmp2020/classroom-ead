@@ -12,15 +12,15 @@
                     <br/>
                     <img class="mb-4" src="assets/icons/entrar.svg" alt="" width="100" height="100">
                     <label for="userName" class="sr-only">Login</label>
-                    <input type="text" id="userName" name="userName" class="form-control" placeholder="Ex: Israel"/> 
+                    <input type="text" id="userName" name="credentials.userName" class="form-control" placeholder="Ex: Israel"/> 
                     <br/>
                     <label for="password" class="sr-only">Password</label>
-                    <input type="password" id="password" name="password"class="form-control" placeholder="Password">
+                    <input type="password" id="password" name="credentials.password"class="form-control" placeholder="Password">
                     <br/>
                     <button class="btn btn-lg btn-primary btn-block" type="submit" style="background:#563D7C; border: none;">Entrar</button>
                     <p style='color:red;'>
                         ${loginErrorMsg}
                     </p>
-                </form>
+             </form>
     </body>
 </html>

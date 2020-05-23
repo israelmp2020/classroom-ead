@@ -12,9 +12,10 @@ public class StudentsRepositoryAsMemoryDataBase implements StudentsRepository {
 
     public StudentsRepositoryAsMemoryDataBase() {
         this.studentsDB = new ArrayList<>();
+        this.studentsDB.add(new Student("joao", "123", 20));
 
     }
-
+   
     @Override
     public void create(Student student) {
         this.studentsDB.add(student);

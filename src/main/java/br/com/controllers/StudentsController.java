@@ -28,7 +28,11 @@ public class StudentsController {
     public void create() {
 
     }
+    
+    @Get("list")
+    public void list() {
 
+    }
     @Post("")
     @IncludeParameters
     public void store(Student student) {
