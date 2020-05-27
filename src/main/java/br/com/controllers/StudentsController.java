@@ -33,6 +33,7 @@ public class StudentsController {
     public void list() {
 
     }
+    
     @Post("")
     @IncludeParameters
     public void store(Student student) {

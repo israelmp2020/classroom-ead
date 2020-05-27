@@ -29,7 +29,7 @@ public class AuthController {
                 && credentials.getPassword().equals("123")) {
             authSession.setUserName(credentials.getUserName());
             authSession.setIsLogged(true);
-            result.redirectTo(StudentsController.class).getStudents();
+            result.redirectTo(homeController.class).home();
         } else {
             result.include("loginErrorMsg", "Login ou Senha inválido!");
             result.redirectTo(this).login();
